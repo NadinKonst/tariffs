@@ -1,0 +1,12 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.tariff-card {
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+}
