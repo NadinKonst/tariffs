@@ -1,0 +1,13 @@
+.tariff {
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  max-width: 300px;
+  background-color: color;
+  cursor: pointer;
+}
+
+.selected {
+  transform: scale(1.1);
+}
