@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Tariff.css";
+import "./Tariff.scss";
 
 export default function Tariff({ name, price, speed, traffic, color }) {
   const [selected, setSelected] = useState(false);
@@ -8,14 +8,14 @@ export default function Tariff({ name, price, speed, traffic, color }) {
     setSelected(!selected);
   };
 
-  const style = {
-    backgroundColor: color,
-  };
-
-  const styles = selected ? "tariff selected" : "tariff";
+  const styleSelected = selected ? "tariff selected" : "tariff";
 
   return (
-    <div className={styles} style={style} onClick={handleClick}>
+    <div
+      className={styleSelected}
+      style={{ backgroundColor: color }}
+      onClick={handleClick}
+    >
       <h2>{name}</h2>
       <p>{price}</p>
       <p>{speed}</p>

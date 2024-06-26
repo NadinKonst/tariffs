@@ -1,4 +1,4 @@
-import "./Card.css";
+import "./Card.scss";
 import Tariff from "../Tariff/Tariff";
 import { data } from "../../data";
 

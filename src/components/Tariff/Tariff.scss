@@ -1,0 +1,28 @@
+.tariff {
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  max-width: 300px;
+  cursor: pointer;
+
+  .lightblue {
+    background-color: lightblue;
+  }
+
+  .turquoise {
+    background-color: turquoise;
+  }
+
+  .coral {
+    background-color: coral;
+  }
+
+  .darkgray {
+    background-color: darkgray;
+  }
+}
+
+.selected {
+  transform: scale(1.1);
+}
