@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './Text.scss';
+import "./Text.scss";
 
 export default function AddText() {
   const [newText, setNewText] = useState("");
@@ -20,7 +20,7 @@ export default function AddText() {
       <button type="button" onClick={handleShowText}>
         Add Text
       </button>
-      <p>{showText}</p>
+      <p className="text">{showText}</p>
     </div>
   );
 }
