@@ -6,6 +6,7 @@ export default function AddText() {
   const [showText, setShowText] = useState("");
 
   const handleAddText = (e) => {
+    e.preventDefault();
     setNewText(e.target.value);
   };
 
@@ -17,7 +18,7 @@ export default function AddText() {
   return (
     <div className="container">
       <input type="text" required value={newText} onChange={handleAddText} />
-      <button type="button" onClick={handleShowText}>
+      <button type="submit" onClick={handleShowText}>
         Add Text
       </button>
       <p className="text">{showText}</p>
