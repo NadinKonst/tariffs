@@ -4,13 +4,21 @@ import "./Text.scss";
 export default function AddText() {
   const [newText, setNewText] = useState("");
   const [showText, setShowText] = useState("");
+  const [error, setError] = useState("");
 
   const handleAddText = (e) => {
-    e.preventDefault();
     setNewText(e.target.value);
+    setError("");
   };
 
-  const handleShowText = () => {
+  const handleShowText = (e) => {
+    e.preventDefault();
+
+    if (newText.trim() === "") {
+      setError("Type something");
+      return;
+    }
+
     setShowText(newText);
     setNewText("");
   };
@@ -21,6 +29,7 @@ export default function AddText() {
       <button type="submit" onClick={handleShowText}>
         Add Text
       </button>
+      {error && <p className="error">{error}</p>}
       <p className="text">{showText}</p>
     </div>
   );
