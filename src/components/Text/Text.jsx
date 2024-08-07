@@ -11,9 +11,7 @@ export default function AddText() {
     setError("");
   };
 
-  const handleShowText = (e) => {
-    e.preventDefault();
-
+  const handleShowText = () => {
     if (newText.trim() === "") {
       setError("Type something");
       return;
@@ -26,7 +24,7 @@ export default function AddText() {
   return (
     <div className="container">
       <input type="text" required value={newText} onChange={handleAddText} />
-      <button type="submit" onClick={handleShowText}>
+      <button type="button" onClick={handleShowText}>
         Add Text
       </button>
       {error && <p className="error">{error}</p>}
